@@ -1,0 +1,58 @@
+{
+  "name": "probra",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "Jado",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.19",
+    "mdbvue": "^6.7.1",
+    "nprogress": "^0.2.0",
+    "query-string": "^6.13.1",
+    "secure-ls": "^1.2.6",
+    "view-router": "^0.2.3",
+    "vue": "^2.5.11",
+    "vue-data-tables": "^3.4.5",
+    "vue-pdf": "^4.0.8",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.1.6",
+    "vue-sweetalert2": "^3.0.3",
+    "vuex": "^3.5.1",
+    "vuex-persistedstate": "^3.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-env": "^7.9.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-jsx-v-model": "^2.0.3",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-vue-jsx-sync": "0.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
