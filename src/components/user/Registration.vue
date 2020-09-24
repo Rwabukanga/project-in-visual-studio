@@ -1,8 +1,11 @@
 <template>
 <div class="container">
-   
+   <div class="card">
+       <div class="card-header">
+           <h1>REGISTRATION</h1>
+       </div>
+       <div class="card-body">
     <form>
-     
     <div class="col-xs-12 col-sm-8 col-sm-offset col-md-6 col-md-offset-3">    
     <label>Firstname</label>
     <input type="text" class="form-control" placeholder="First name" id="firstname" v-model="user.firstname">
@@ -74,10 +77,12 @@
  
 <div class="form-group row">
 <div class="col-xs-12 col-sm-8 col-sm-offset col-md-6 col-md-offset-3">
-<button type="submit" class="btn btn-primary btn-sm" @click="addinguser()">Save</button>
+<button type="submit" class="btn-lg  btn-primary " @click="addinguser()">Save</button>
 </div>
 </div>
 </form>
+       </div>
+   </div>
 </div>
 </template>
 <script>
@@ -139,7 +144,41 @@ export default {
 form{
    /*  margin: 20px 20px 30px 30px; */
     background-color: white;
-   
-
 }
+
+.card{
+ margin-top: 20px;
+}
+.card-header{
+    background-color: chocolate;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-display: initial;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.card-body{
+    
+    background-color: lightpink;
+}
+label{
+    text-align: center;
+    font-weight: lighter;
+    font-size: larger;
+    font-style: normal;
+    font-variant: normal;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 24em;
+    width: 8em;
+    margin-bottom: 20px;
+}
+
 </style>

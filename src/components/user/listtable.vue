@@ -38,10 +38,12 @@ components:{
        label:'FirstName'
        
       },
+
       {
         prop:'lastname',
         label:'LastName'
       },
+      
       {
         prop:'dob',
         label:'DOB'

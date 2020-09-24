@@ -6,15 +6,15 @@ export const guards = {
         if(store.state.auth !== null){
             next();
         } else{
-            next('/login')
+            next('/')
         }
     },
 
     isAdmin :(to, from, next) => {
-     if(store.state.auth.user.role === "Admin"){
+     if(store.state.auth != null && store.state.auth.user.role === "Admin"){
          next();
      }else{
-         next("/login");
+         next("/");
      }
     },
 
@@ -22,19 +22,19 @@ export const guards = {
         if(store.state.auth.user.reg.category == "Seller"){
             next();
         }else{
-            next("/login");
+            next("/");
         }
     },
     isCustomer :(to, from, next) => {
         if(store.state.auth.user.reg.category == "Customer"){
             next();
         }else{
-            next("/login");
+            next("/");
         }
     },
 
     isAdminOrSeller :(to, from, next) =>{
-      if(store.state.auth.user.role == "Admin" || store.state.auth.user.reg.category == "Seller"){
+      if(store.state.auth != null  && store.state.auth.user.role == "Admin" || store.state.auth.user.reg.category == "Seller"){
           next();
       }else{
           next("/login");

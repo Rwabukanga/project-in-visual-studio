@@ -31,6 +31,9 @@ import SelersDashboard      from  './components/user/SelersDashboard';
 import saveadminn          from './components/user/saveadminn';
 import allusers            from './components/user/allusers';
 import dddashboard         from './components/user/dddashboard';
+import Catalo              from './components/user/Catalo';
+import Dash             from './components/user/Dash';
+import OgDashboard      from './components/user/OgDashboard';
 import { guards } from './router-guards';
 import Router from 'vue-router';
 import NProgress from 'nprogress';
@@ -62,6 +65,14 @@ export const router = new Router({
     {
         path:'/home',
         component:Home
+    },
+    {
+        path:'/das',
+        component:Dash
+    },
+    {
+        path:'/cat',
+        component:Catalo
     },
 
     {
@@ -230,7 +241,7 @@ export const router = new Router({
        
 
           {  
-            path: '/login',
+            path: '/',
             component : Login
             },
 
@@ -253,7 +264,12 @@ export const router = new Router({
         path:'/allus', 
         component: allusers
         
-   }
+       },
+
+       {
+           path:'/og',
+           component:OgDashboard
+       }
 
      /*  path:'/',
       redirect:'login',

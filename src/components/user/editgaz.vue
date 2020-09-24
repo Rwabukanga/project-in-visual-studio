@@ -68,6 +68,7 @@ export default {
              e.preventDefault();
         }
     },
+    
     created: function(){
        this.fetchgaz(this.$route.params.uuid);
     }

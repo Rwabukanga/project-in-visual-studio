@@ -17,18 +17,18 @@
       <label>Cost</label>
       <input type="cost" class="form-control" id="cost" v-model="gaz.cost">
         </div>
-        <div class="col-xs-12 col-sm-8 col-sm-offset col-md-6 col-md-offset-3">
+       <!--  <div class="col-xs-12 col-sm-8 col-sm-offset col-md-6 col-md-offset-3">
         <label>Select Picture</label>
     
        
         <input type="file" @change="onFileSelected" >
       
         
-    </div>
+    </div> -->
    
               <br>
 <div class="col-xs-12 col-sm-8 col-sm-offset col-md-6 col-md-offset-3">
-  <button type="submit" class="btn btn-primary" @click="onUpload()">Submit</button> 
+  <button type="submit" class="btn btn-primary" @click="addgaz()">Submit</button> 
   </div>             
 </form>    
 </div>   
@@ -43,13 +43,13 @@ export default {
         return{
             gaz:{quality:'',description:'',quantity:'',cost:''},
             alert:'',
-            selectedFile: null,
+           /*  selectedFile: null, */
       
         }
     },
 methods:{
 addgaz(e){
-    if(!this.gaz.quality|| !this.gaz.description|| !this.gaz.quantity|| !this.gaz.cost || !this.selectedFile){
+    if(!this.gaz.quality|| !this.gaz.description|| !this.gaz.quantity|| !this.gaz.cost){
     this.alert = 'fill all places';
             }else{
                 let ngaz = {
@@ -57,7 +57,7 @@ addgaz(e){
                     description : this.gaz.description,
                     quantity : this.gaz.quantity,
                     cost : this.gaz.cost,
-                    selectedFile: this.selectedFile
+                  /*   selectedFile: this.selectedFile */
                     
                 }
                 axios.post('http://localhost:2002/gaz/save/'+this.$route.params.uuid, ngaz)
@@ -69,17 +69,17 @@ addgaz(e){
             }
             e.preventDefault();
         },
-       onFileSelected(event){
+    /*    onFileSelected(event){
            this.selectedFile = event.target.files[0];
-       },
-       onUpload(){
+       }, */
+      /*  onUpload(){
            const fd = new FormData();
            fd.append('image', this.selectedFile)
            axios.post('http://localhost:2002/gaz/savegaz', fd)
            .then(res =>{
                console.log(res)
            })
-       }
+       } */
        
     }
 }
