@@ -37,14 +37,14 @@ export const guards = {
       if(store.state.auth != null  && store.state.auth.user.role == "Admin" || store.state.auth.user.reg.category == "Seller"){
           next();
       }else{
-          next("/login");
+          next("/");
       }
     },
     isAdminOrCustomer :(to, from, next) =>{
      if(store.state.auth.user.role == "Admin" || store.state.auth.user.reg.category == "Customer"){
          next();
      }else{
-         next("/login");
+         next("/");
      }
     }
 }

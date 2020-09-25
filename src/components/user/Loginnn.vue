@@ -8,7 +8,7 @@
 	<!--  <h2 class="panel-heading">Login Form</h2> -->
 	<!-- <div class="panel-body"> -->
 		
-		<form v-on:submit.prevent="login">
+		<form v-on:submit.prevent= "login">
 		<div class="row">
 			
 			 <div class="col-xs-20 col-sm-12 col-sm-offset col-md-3 col-md-offset-3">
@@ -23,7 +23,7 @@
 		<div class="row">
 			 <div class="col-xs-12 col-sm-8 col-sm-offset col-md-3 col-md-offset-3">
 			<label>Password</label>
-			<input name="password" type="password"  class="form-control" id="password" v-model="dd.password">
+			<input name="password" type="password"  class="form-control" id="password" v-model="dd.password" required>
 		
 		</div>
 		 </div>

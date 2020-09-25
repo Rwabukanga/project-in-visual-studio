@@ -36,7 +36,7 @@ export const store = new Vuex.Store({
             
             if(state.auth === null){
                 username = "not logged in";
-            }else if(state.auth.user.role === "Admin"){
+            }else if(state.auth.user.role == "Admin"){
 
                 username = state.auth.user.username;
 
@@ -89,21 +89,19 @@ export const store = new Vuex.Store({
                    
 
                 }
-            })
-
-            .catch(err =>{
+            }).catch(err =>{
                console.error(err);
             })
         },
         logout: context=>{
             context.commit('mutateAuth', null);
             localStorage.clear();
-            router.push("/login");
+            router.push("/");
         },
         signUp: (context, credentials) => {
             axios.post(context.state.backend_url + "/registrar/save", credentials)
             .then(res =>{
-                if(res.data.code === 200){
+                if(res.data.code == 200){
                  context.commit('mutateAuth', res.data.OBJECT);
                  router.push("/dashboard")
                 } else{
